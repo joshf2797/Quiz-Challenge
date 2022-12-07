@@ -93,6 +93,7 @@ document.getElementById("start").addEventListener("click", function(){
   function stopTimer() {
     clearInterval(downloadTimer);
     document.getElementById("score-here").innerHTML = "Score " + score;
+    document.getElementById("timer").innerHTML = "Well Done!"
  }
 
   function keepScore () {
