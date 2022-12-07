@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Challenge</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <header>   
+        <p class="title">Quiz Challenge</p>
+        <p class="name">Created by Joshua</p>
+    </header>
+    <main>
+        <p class="time" id="timer">Get Ready!</p>  
+        <div class="container" id="visable">
+            <p class="opening" id="opening">This is a multiple choice timed quiz. Every wrong answer will deduct 5 seconds from the time remaining. Good Luck!</p>
+            <button class="start-btn" id="start">Start</button>
+            <div class="hidden" id="question1">
+                <p>What does CSS mean?</p>
+                <button class="an1" id="wrong1">Coding So Simple</button>
+                <button class="an2" id="correct1">Cascading Style Sheets</button>
+                <button class="an3" id="wrong1a">Common Style Screen</button>
+            </div>
+            <div class="hidden" id="question2">
+                <p>What year did the Titanic sink?</p>
+                <button class="an1" id="correct2">1912</button>
+                <button class="an2" id="wrong2">1928</button>
+                <button class="an3" id="wrong2a">1997</button>
+            </div>
+            <div class="hidden" id="question3">
+                <p>How far away is the Moon from Earth?</p>
+                <button class="an1" id="correct3">238,900 miles</button>
+                <button class="an2" id="wrong3">187,700miles</button>
+                <button class="an3" id="wrong3a">256,000 miles</button>
+            </div>
+            <div class="scoreboard" id="scoreboard">
+                <p id="score-here"></p>
+                <input type="text" placeholder="Name" class="input" id="input">
+                <button id="submit">Submit</button>
+                <button id="highscores">High Score!</button>
+            </div>
+        </div>
+        
+    </main>
+    <script src="quiz.js"></script>
+</body>
+</html>

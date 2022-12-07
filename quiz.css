@@ -1,0 +1,130 @@
+:root {
+    --purple: rgba(86, 44, 126, 0.565);
+    --white: rgb(255, 255, 255);
+    --font: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 125px;
+    background-color: var(--purple);
+}
+.title {
+    font-family: var(--font);
+    font-size: 200%;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+.name {
+    margin: auto;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+    font-family: var(--font);
+}
+#timer {
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 150%;
+    font-family: var(--font);
+}
+.container {
+    height: 200px;
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    border-style: groove;
+    border-color: var(--purple);
+    border-width: 4px;
+    position: relative;
+    border-radius: 15px;
+}
+.opening {
+    text-align: center;
+    font-family: var(--font);
+    padding: 25px;
+}
+.start-btn {
+    display: block;
+    position: relative;
+    margin-left: 200px;
+    height: 50px;
+    width: 100px;
+    background-color: var(--white);
+    color: var(--purple);
+    border-radius: 30px;
+    font-family: var(--font);
+    font-size: 120%;
+    font-weight: 600;
+}
+.start-btn:hover {
+    background-color: var(--purple);
+    color: white;
+    cursor: pointer;
+}
+
+#question1 , #question2 , #question3 , .scoreboard , #submit , #highscores{
+    display: none;
+    font-size: 125%;
+    text-align: center;
+    font-family: var(--font);
+    padding: 25px;
+    position: relative;
+}
+.an1 , .an2 , .an3 {
+    background-color: var(--white);
+    color: var(--purple);
+    font-family: var(--font);
+    font-size: 70%;
+    font-weight: 600;
+    border-radius: 25px;
+    width: 125px;
+    height: 50px;
+    position: relative;
+    align-items: center;
+}
+.an1:hover , .an2:hover , .an3:hover , #submit:hover , #highscores:hover{
+    background-color: var(--purple);
+    color: var(--white);
+    cursor: pointer;
+}
+
+#correct1:active , #correct2:active , #correct3:active {
+    background-color: rgba(144, 210, 45, 0.711);
+    color: var(--white);
+}
+
+#wrong1:active , #wrong1a:active , #wrong2:active , #wrong2a:active , #wrong3:active , #wrong3a:active {
+    background-color: firebrick;
+    color: var(--white);
+}
+
+#submit , #highscores {
+    background-color: var(--white);
+    border-radius: 25px;
+    color: var(--purple);
+    font-family: var(--font);
+    font-size: 95%;
+    font-weight: 600;
+    position: relative;
+    margin: auto;
+    height: fit-content;
+}
+
+#score-here {
+    font-family: var(--font);
+    color: var(--purple);
+    font-size: 150%;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.input {
+    margin: 10px;
+}
+
+body {
+    margin: 0;
+}
