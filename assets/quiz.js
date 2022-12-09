@@ -1,99 +1,113 @@
+var timer = document.getElementById("timer");
+var startBtn = document.getElementById("start");
+var openingMessage = document.getElementById("opening");
+var submit = document.getElementById ("submit");
+var input = document.getElementById("input");
+var highscores = document.getElementById("highscores");
+var scoreboard = document.getElementById("scoreboard");
+var question1 = document.getElementById("question1");
+var correct1 = document.getElementById("correct1");
+var wrong1 = document.getElementById("wrong1");
+var wrong1a = document.getElementById("wrong1a");
+var question2 = document.getElementById("question2");
+var correct2 = document.getElementById("correct2");
+var wrong2 = document.getElementById("wrong2");
+var wrong2a = document.getElementById("wrong2a");
+var question3 = document.getElementById("question3");
+var correct3 = document.getElementById("correct3");
+var wrong3 = document.getElementById("wrong3");
+var wrong3a = document.getElementById("wrong3a");
 var timeLeft = 50;
-var container = document.getElementsByClassName (".container");
-var startBtn = document.getElementsByClassName (".start-btn");
-var openingMessage = document.getElementsByClassName (".opening");
-var hidden = document.getElementsByClassName (".hidden")
-var submit = document.getElementById ("#submit")
 var score = 0;
 var downloadTimer;
 
-document.getElementById("start").addEventListener("click", function(){
-  document.getElementById("opening").style.display = "none";
-  document.getElementById("start").style.display = "none";
-  document.getElementById("question1").style.display = "block";
+startBtn.addEventListener("click", function(){
+  openingMessage.style.display = "none";
+  startBtn.style.display = "none";
+  question1.style.display = "block";
     downloadTimer = setInterval(function function1(){
-    document.getElementById("timer").innerHTML = timeLeft + 
+    timer.innerHTML = timeLeft + 
     "&nbsp"+"seconds remaining";
     timeLeft -= 1;
     if(timeLeft === 0){
         clearInterval(downloadTimer);
-        document.getElementById("timer").innerHTML = "Time is up!"
+        timer.innerHTML = "Time is up!"
     }
     }, 1000);
 });
 
-  document.getElementById("correct1").onclick = function() {
+  correct1.onclick = function() {
     score += 5;
-    document.getElementById("question1").style.display = "none";
-    document.getElementById("question2").style.display = "block";
+    question1.style.display = "none";
+    question2.style.display = "block";
   
   }
   
-  document.getElementById("wrong1").onclick = function () {
+  wrong1.onclick = function () {
     timeLeft -= 10;
-    document.getElementById("question1").style.display = "none";
-    document.getElementById("question2").style.display = "block";
+    question1.style.display = "none";
+    question2.style.display = "block";
   
   }
 
-  document.getElementById("wrong1a").onclick = function () {
+  wrong1a.onclick = function () {
     timeLeft -= 10;
-    document.getElementById("question1").style.display = "none";
-    document.getElementById("question2").style.display = "block";
+    question1.style.display = "none";
+    question2.style.display = "block";
   
   }
 
-  document.getElementById("correct2").onclick = function() {
+  correct2.onclick = function() {
     score += 5;
-    document.getElementById("question2").style.display = "none";
-    document.getElementById("question3").style.display = "block";
+    question2.style.display = "none";
+    question3.style.display = "block";
  
   }
 
-  document.getElementById("wrong2").onclick = function () {
+  wrong2.onclick = function () {
     timeLeft -= 10;
-    document.getElementById("question2").style.display = "none";
-    document.getElementById("question3").style.display = "block";
+    question2.style.display = "none";
+    question3.style.display = "block";
 
   }
 
-  document.getElementById("wrong2a").onclick = function () {
+  wrong2a.onclick = function () {
     timeLeft -= 10;
-    document.getElementById("question2").style.display = "none";
-    document.getElementById("question3").style.display = "block";
+    question2.style.display = "none";
+    question3.style.display = "block";
   
   }
 
-  document.getElementById("correct3").onclick = function() {
+  correct3.onclick = function() {
     score += 5;
-    document.getElementById("question3").style.display = "none";
-    document.getElementById("scoreboard").style.display = "block";
-    document.getElementById("submit").style.display = "block";
+    question3.style.display = "none";
+    scoreboard.style.display = "block";
+    submit.style.display = "block";
     stopTimer()
   
   }
 
-  document.getElementById("wrong3").onclick = function () {
+  wrong3.onclick = function () {
     timeLeft -= 10;
-    document.getElementById("question3").style.display = "none";
-    document.getElementById("scoreboard").style.display = "block";
-    document.getElementById("submit").style.display = "block";
+    question3.style.display = "none";
+    scoreboard.style.display = "block";
+    submit.style.display = "block";
     stopTimer()
 
   }
 
-  document.getElementById("wrong3a").onclick = function () {
+  wrong3a.onclick = function () {
     timeLeft -= 10;
-    document.getElementById("question3").style.display = "none";
-    document.getElementById("scoreboard").style.display = "block";
-    document.getElementById("submit").style.display = "block";
+    question3.style.display = "none";
+    scoreboard.style.display = "block";
+    submit.style.display = "block";
     stopTimer()
   }
 
   function stopTimer() {
     clearInterval(downloadTimer);
     document.getElementById("score-here").innerHTML = "Score " + score;
-    document.getElementById("timer").innerHTML = "Well Done!"
+    timer.innerHTML = "Well Done!"
  }
 
   function keepScore () {
@@ -107,12 +121,12 @@ document.getElementById("start").addEventListener("click", function(){
     }
   }
 
-  document.getElementById ("submit").addEventListener ("click" , function (event) {
+  submit.addEventListener ("click" , function (event) {
     event.preventDefault()
-    document.getElementById("submit").style.display = "none";
-    document.getElementById("highscores").style.display = "block";
+    submit.style.display = "none";
+    highscores.style.display = "block";
 
-   var username = document.getElementById("input").value;
+   var username = input.value;
 
     localStorage.setItem("Score" , score);
     localStorage.setItem("Username" , username);
